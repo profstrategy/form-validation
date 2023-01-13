@@ -29,23 +29,19 @@
                 <div class="card mt-4">
                     <div class="card-body">
                         <div class="input-body">
-                            <img src="./images/icon-error.svg" alt="svg" class="p-2 " id="image1">
                             <input type="text" class="form-control-lg input-field" id="inp1">
                         </div>
                         <div id="res1" class="res"></div>
                         <div class="input-body">
-                            <img src="./images/icon-error.svg" alt="svg" class="p-2" id="image2">
                             <input type="text" class="form-control-lg input-field" id="inp2">
                         </div>
                         <div id="res2" class="res"></div>
                         <div class="input-body">
-                            <img src="./images/icon-error.svg" alt="svg" class="p-2" id="image3">
                             <input type="email" class="form-control-lg input-field" id="inp3"
                                 placeholder="email@example/com">
                         </div>
                         <div id="res3" class="res"></div>
                         <div class="input-body">
-                            <img src="./images/icon-error.svg" alt="svg" class="p-2" id="image4">
                             <input type="password" class="form-control-lg input-field" id="inp4">
                         </div>
                         <div id="res4" class="res"></div>
@@ -66,16 +62,11 @@
         let inp2 = document.getElementById('inp2').value;
         let email = document.getElementById('inp3').value;
         let inp4 = document.getElementById('inp4').value;
-        let image1 = document.getElementById('image1')
-        let image2 = document.getElementById('image2')
-        let image3 = document.getElementById('image3')
-        let image4 = document.getElementById('image4')
 
 
         console.log(inp1)
         if (inp1 == '') {
             res1.innerText = 'First Name cannot be empty'
-            image1.style.display = 'block'
         } else {
             res1.innerText = ''
             image1.style.display = 'none'
@@ -83,36 +74,28 @@
 
         if (inp2 == '') {
             res2.innerText = 'Last Name cannot be empty'
-            image2.style.display = 'block'
         } else {
             res2.innerText = ''
-            image2.style.display = 'none'
         }
 
         if (email == '') {
             res3.innerText = 'Email cannot be empty'
-            image3.style.display = 'block'
         } else {
             res3.innerText = ''
-            image3.style.display = 'none'
         }
 
         let atposition = email.indexOf('@');
         let dotposition = email.lastIndexOf('.');
         if(atposition<1 || dotposition<atposition+2 || dotposition+2>=email.length){
             res3.innerText = 'Looks like this is not an email'
-            image3.style.display = 'block'
         }else{
             res3.innerText = ''
-            image3.style.display = 'none'
         }
 
         if (inp4 == '') {
             res4.innerText = 'Password cannot be empty'
-            image4.style.display = 'block'
         } else {
             res4.innerText = ''
-            image4.style.display = 'none'
         }
     }
 </script>
